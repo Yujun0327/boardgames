@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yujun's table — fan-made board games to play online with friends. No accounts, no servers." />
+  <meta name="robots" content="noindex" />
+  <title>Yujun's Board Games</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' rx='5' fill='%23F2EBD9' stroke='%233A3527' stroke-width='2'/%3E%3Ccircle cx='11' cy='11' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='21' cy='11' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='11' cy='21' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='21' cy='21' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23A9553F'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,620&family=Alegreya:ital,wght@0,400;1,400&family=Lilita+One&family=Marcellus&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #f2ebd9;
+      --ink: #3a3527;
+      --ink-soft: rgb(58 53 39 / 0.62);
+      --line: rgb(58 53 39 / 0.28);
+      --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.23 0 0 0 0 0.21 0 0 0 0 0.15 0 0 0 0.05 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Alegreya', georgia, serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: var(--grain);
+      pointer-events: none;
+      z-index: 99;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+      padding: 8vh 1.25rem 4rem;
+    }
+    header {
+      text-align: center;
+      border-top: 2px solid var(--ink);
+      border-bottom: 1px solid var(--line);
+      padding: 1.4rem 0 1.2rem;
+      margin-bottom: 3rem;
+    }
+    .fleuron { color: var(--ink-soft); font-size: 0.9rem; }
+    h1 {
+      font-family: 'Fraunces', georgia, serif;
+      font-weight: 620;
+      font-size: clamp(2.1rem, 5.5vw, 3.1rem);
+      letter-spacing: -0.01em;
+      margin: 0.15rem 0 0.2rem;
+    }
+    .tagline {
+      font-style: italic;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+      gap: 1.4rem;
+    }
+    .game {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 2rem 1.4rem 1.6rem;
+      border: 1px solid var(--line);
+      box-shadow: 0 2px 6px rgb(58 53 39 / 0.18);
+      transition: transform 160ms cubic-bezier(0.2, 0.7, 0.3, 1.1), box-shadow 160ms ease;
+    }
+    .game:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgb(58 53 39 / 0.24);
+    }
+    .game:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    .emblem { width: 74px; height: 74px; margin-bottom: 1rem; }
+    .game h2 { margin: 0 0 0.35rem; font-size: 1.55rem; font-weight: 400; }
+    .game p { margin: 0 0 1.1rem; font-size: 0.95rem; }
+    .play {
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.45rem 1.3rem;
+      border-radius: 6px;
+      border: 1px solid currentColor;
+    }
+    .players {
+      margin-top: 0.9rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      opacity: 0.7;
+    }
+
+    /* — Toy Battle: the toy box — */
+    .toybattle {
+      background: #fdf6e3;
+      color: #4a3728;
+    }
+    .toybattle h2 { font-family: 'Lilita One', sans-serif; color: #c74a33; letter-spacing: 0.02em; }
+    .toybattle .play { color: #c74a33; background: #fdeeda; }
+
+    /* — Harmonies: the field guide — */
+    .harmonies {
+      background: #f8f3e4;
+      color: #3a3527;
+    }
+    .harmonies h2 { font-family: 'Fraunces', georgia, serif; font-weight: 620; color: #465f38; }
+    .harmonies .play { color: #465f38; background: #efe8d2; }
+
+    /* — Splendor: the jewel house — */
+    .splendor {
+      background: #0f2c23;
+      color: #f2e9d5;
+      border-color: rgb(201 162 39 / 0.5);
+    }
+    .splendor h2 { font-family: 'Marcellus', georgia, serif; color: #c9a227; letter-spacing: 0.06em; }
+    .splendor p { color: rgb(242 233 213 / 0.85); }
+    .splendor .play { color: #c9a227; background: rgb(201 162 39 / 0.08); }
+
+    footer {
+      margin-top: 3.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+    }
+    footer p { margin: 0.3rem 0; }
+    @media (prefers-reduced-motion: reduce) {
+      .game { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="fleuron">❦</div>
+      <h1>Yujun's Board Games</h1>
+      <p class="tagline">three tables, always open — bring a friend, share a room code</p>
+    </header>
+
+    <div class="games">
+      <a class="game toybattle" href="https://toybattleboardgame.netlify.app/">
+        <!-- toy flag emblem -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <path d="M24 12 v50" stroke="#4a3728" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M26 13 Q40 8 43 14 Q52 10 54 17 L50 30 Q44 26 40 30 Q30 33 26 28 Z" fill="#c74a33" stroke="#4a3728" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="24" cy="10" r="3.4" fill="#e8b64c" stroke="#4a3728" stroke-width="2"/>
+          <path d="M14 62 h44" stroke="#4a3728" stroke-width="3" stroke-linecap="round"/>
+          <path d="M33 48 l5 -7 5 7 z" fill="#5b7a9a" stroke="#4a3728" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <h2>Toy Battle</h2>
+        <p>March tin troops across hand-drawn battlefields and claim the nursery floor.</p>
+        <span class="play">deploy the toys</span>
+        <span class="players">2 players &middot; head to head</span>
+      </a>
+
+      <a class="game harmonies" href="https://harmoniesboardgame.netlify.app/">
+        <!-- hex-tree emblem (matches the game's favicon) -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <path d="M37 7 L62 21.5 V52.5 L37 67 L12 52.5 V21.5 Z" fill="#efe8d2" stroke="#3a3527" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M37 52 V41" stroke="#3a3527" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M24 34 Q22 22 31 23 Q33 15 40 19 Q49 16 48 25 Q55 29 49 36 Q50 42 42 41 Q36 46 31 41 Q23 42 24 34 Z" fill="#5c7a4a" stroke="#3a3527" stroke-width="2.4" stroke-linejoin="round"/>
+        </svg>
+        <h2>Harmonies</h2>
+        <p>Stack a small wild landscape and welcome the animals who call it home.</p>
+        <span class="play">open the field guide</span>
+        <span class="players">2&ndash;4 players &middot; hotseat too</span>
+      </a>
+
+      <a class="game splendor" href="https://splendorboardgame.netlify.app/">
+        <!-- art-deco gem emblem -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <circle cx="37" cy="37" r="30" fill="none" stroke="#c9a227" stroke-width="2"/>
+          <circle cx="37" cy="37" r="25.5" fill="none" stroke="#c9a227" stroke-width="0.8" opacity="0.6"/>
+          <path d="M25 30 L32 22 H42 L49 30 L37 52 Z" fill="#1e7a4e" stroke="#c9a227" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M25 30 H49 M32 22 L34.5 30 L37 52 M42 22 L39.5 30" fill="none" stroke="#c9a227" stroke-width="1.2" opacity="0.85"/>
+        </svg>
+        <h2>Splendor</h2>
+        <p>Draft gems, court nobles, and build a Renaissance jewel empire.</p>
+        <span class="play">enter the salon</span>
+        <span class="players">2&ndash;4 players &middot; hotseat too</span>
+      </a>
+    </div>
+
+    <footer>
+      <p>Fan-made adaptations for private play among friends — original code and art, no accounts, no servers.</p>
+      <p>Not affiliated with the publishers of the original games. If one makes you smile, buy it for your real table.</p>
+    </footer>
+  </main>
+</body>
+</html>

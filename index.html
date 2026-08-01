@@ -9,7 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' rx='5' fill='%23F2EBD9' stroke='%233A3527' stroke-width='2'/%3E%3Ccircle cx='11' cy='11' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='21' cy='11' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='11' cy='21' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='21' cy='21' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23A9553F'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,620&family=Alegreya:ital,wght@0,400;1,400&family=Lilita+One&family=Marcellus&family=Grenze+Gotisch:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,620&family=Alegreya:ital,wght@0,400;1,400&family=Lilita+One&family=Marcellus&family=Grenze+Gotisch:wght@500&family=Saira+Stencil+One&family=Courier+Prime:ital@1&display=swap" rel="stylesheet" />
   <style>
     :root {
       --paper: #f2ebd9;
@@ -136,6 +136,16 @@
     .castlecombo p { color: rgb(59 47 30 / 0.85); }
     .castlecombo .play { color: #9e3b23; background: rgb(194 152 50 / 0.14); }
 
+    /* — Davinci Code: the classified dossier — */
+    .davincicode {
+      background: #e7d7a9;
+      color: #2b2620;
+      border-color: rgb(43 38 32 / 0.35);
+    }
+    .davincicode h2 { font-family: 'Saira Stencil One', sans-serif; text-transform: uppercase; color: #2b2620; letter-spacing: 0.05em; font-size: 1.35rem; }
+    .davincicode p { font-family: 'Courier Prime', monospace; font-style: italic; font-size: 0.85rem; color: rgb(43 38 32 / 0.85); }
+    .davincicode .play { color: #a6382e; background: rgb(166 56 46 / 0.08); }
+
     footer {
       margin-top: 3.5rem;
       text-align: center;
@@ -153,7 +163,7 @@
     <header>
       <div class="fleuron">❦</div>
       <h1>Yujun's Board Games</h1>
-      <p class="tagline">four tables, always open — bring a friend, share a room code</p>
+      <p class="tagline">five tables, always open — bring a friend, share a room code</p>
     </header>
 
     <div class="games">
@@ -214,6 +224,21 @@
         <h2>Castle Combo</h2>
         <p>Court the castle and the village, and pen a nine-card kingdom worth singing about.</p>
         <span class="play">open the manuscript</span>
+        <span class="players">2&ndash;4 players &middot; hotseat too</span>
+      </a>
+
+      <a class="game davincicode" href="https://yujun0327.github.io/davincicode/">
+        <!-- two cipher slips under the stamp strike (matches the game's favicon) -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <rect x="12" y="14" width="22" height="44" rx="3" fill="#17130e" stroke="#2b2620" stroke-width="2"/>
+          <rect x="17.5" y="33" width="11" height="6" rx="1.4" fill="#f9f3e2" opacity="0.9"/>
+          <rect x="40" y="14" width="22" height="44" rx="3" fill="#f9f3e2" stroke="#2b2620" stroke-width="2"/>
+          <path d="M45.5 29 H56 L49.5 45" fill="none" stroke="#2b2620" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M42 54 L60 20" stroke="#a6382e" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+        </svg>
+        <h2>Davinci Code</h2>
+        <p>Stand your ciphers in a sealed row — and crack theirs before they crack yours.</p>
+        <span class="play">open the dossier</span>
         <span class="players">2&ndash;4 players &middot; hotseat too</span>
       </a>
     </div>

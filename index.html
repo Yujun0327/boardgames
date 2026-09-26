@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yujun's table — fan-made board games to play online with friends. No accounts, no servers." />
+  <meta name="robots" content="noindex" />
+  <title>Yujun's Board Games</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' rx='5' fill='%23F2EBD9' stroke='%233A3527' stroke-width='2'/%3E%3Ccircle cx='11' cy='11' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='21' cy='11' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='11' cy='21' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='21' cy='21' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23A9553F'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,620&family=Alegreya:ital,wght@0,400;1,400&family=Lilita+One&family=Marcellus&family=Grenze+Gotisch:wght@500&family=Saira+Stencil+One&family=Courier+Prime:ital@1&family=Limelight&family=Michroma&family=Black+Han+Sans&family=Song+Myung&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet" />
+  <style>:root{--paper:#f2ebd9;--ink:#3a3527;--ink-soft:#3a35279e;--line:#3a352747;--grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.23 0 0 0 0 0.21 0 0 0 0 0.15 0 0 0 0.05 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>")}*{box-sizing:border-box}body{background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;margin:0;font-family:Alegreya,georgia,serif;line-height:1.5}body:before{content:"";background-image:var(--grain);pointer-events:none;z-index:99;position:fixed;inset:0}main{max-width:60rem;margin:0 auto;padding:8vh 1.25rem 4rem}header{text-align:center;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin-bottom:3rem;padding:1.4rem 0 1.2rem}.fleuron{color:var(--ink-soft);font-size:.9rem}h1{letter-spacing:-.01em;margin:.15rem 0 .2rem;font-family:Fraunces,georgia,serif;font-size:clamp(2.1rem,5.5vw,3.1rem);font-weight:620}.tagline{color:var(--ink-soft);margin:0;font-style:italic}.games{grid-template-columns:repeat(auto-fit,minmax(16.5rem,1fr));gap:1.4rem;display:grid}.game{text-align:center;border:1px solid var(--line);border-radius:8px;flex-direction:column;align-items:center;padding:2rem 1.4rem 1.6rem;text-decoration:none;transition:transform .16s cubic-bezier(.2,.7,.3,1.1),box-shadow .16s;display:flex;box-shadow:0 2px 6px #3a35272e}.game:hover{transform:translateY(-4px);box-shadow:0 8px 18px #3a35273d}.game:focus-visible{outline:2px solid var(--ink);outline-offset:3px}.emblem{width:74px;height:74px;margin-bottom:1rem}.game h2{margin:0 0 .35rem;font-size:1.55rem;font-weight:400}.game p{margin:0 0 1.1rem;font-size:.95rem}.play{letter-spacing:.14em;text-transform:uppercase;border:1px solid;border-radius:6px;padding:.45rem 1.3rem;font-size:.8rem}.players{letter-spacing:.08em;opacity:.7;margin-top:.9rem;font-size:.75rem}.toybattle{color:#4a3728;background:#fdf6e3}.toybattle h2{color:#c74a33;letter-spacing:.02em;font-family:Lilita One,sans-serif}.toybattle .play{color:#c74a33;background:#fdeeda}.harmonies{color:#3a3527;background:#f8f3e4}.harmonies h2{color:#465f38;font-family:Fraunces,georgia,serif;font-weight:620}.harmonies .play{color:#465f38;background:#efe8d2}.splendor{color:#f2e9d5;background:#0f2c23;border-color:#c9a22780}.splendor h2{color:#c9a227;letter-spacing:.06em;font-family:Marcellus,georgia,serif}.splendor p{color:#f2e9d5d9}.splendor .play{color:#c9a227;background:#c9a22714}.castlecombo{color:#3b2f1e;background:#efe4c9;border-color:#3b2f1e59}.castlecombo h2{color:#9e3b23;letter-spacing:.01em;font-family:Grenze Gotisch,georgia,serif;font-weight:500}.castlecombo p{color:#3b2f1ed9}.castlecombo .play{color:#9e3b23;background:#c2983224}.yachtnight{color:#f4ecd9;background:#062017;border-color:#c9a22780}.yachtnight h2{color:#eed688;letter-spacing:.04em;font-family:Limelight,sans-serif;font-size:1.4rem;font-weight:400}.yachtnight p{color:#f4ecd9d9}.yachtnight .play{color:#eed688;background:#c9a2271a}.skyteam{color:#e6ebf0;background:#0b0f14;border-color:#2f7bff80}.skyteam h2{color:#e6ebf0;letter-spacing:.14em;text-transform:uppercase;font-family:Michroma,sans-serif;font-size:1.1rem;font-weight:400}.skyteam p{color:#e6ebf0cc}.skyteam .play{color:#ffb000;background:#ffb0001a}.davincicode{color:#2b2620;background:#e7d7a9;border-color:#2b262059}.davincicode h2{text-transform:uppercase;color:#2b2620;letter-spacing:.05em;font-family:Saira Stencil One,sans-serif;font-size:1.35rem}.davincicode p{color:#2b2620d9;font-family:Courier Prime,monospace;font-size:.85rem;font-style:italic}.davincicode .play{color:#a6382e;background:#a6382e14}.gostop{color:#f3ead6;background:#1f5c3a;border-color:#d9a44180}.gostop h2{color:#f1d27a;letter-spacing:.02em;font-family:Black Han Sans,sans-serif;font-size:1.7rem;font-weight:400}.gostop p{color:#f3ead6d9}.gostop .play{color:#f1d27a;background:#c8102e59;border-color:#c8102e}.seotda{color:#f0e6d2;background:#6b1a1f;border-color:#b8862b8c}.seotda h2{color:#e6c26a;letter-spacing:.06em;font-family:Song Myung,serif;font-size:1.7rem;font-weight:400}.seotda p{color:#f0e6d2d9}.seotda .play{color:#e6c26a;background:#b8862b1f}.holdem{color:#efe6d3;background:#132238;border-color:#b8862b8c}.holdem h2{color:#e6c26a;letter-spacing:-.01em;font-family:Fraunces,georgia,serif;font-size:1.7rem;font-weight:700}.holdem p{color:#efe6d3d9}.holdem .play{color:#e6c26a;background:#b8862b1f}footer{text-align:center;color:var(--ink-soft);margin-top:3.5rem;font-size:.75rem}footer p{margin:.3rem 0}@media (prefers-reduced-motion:reduce){.game{transition:none}}</style>
+  <script type="module" crossorigin src="/boardgames/assets/index-3aZ3OzLA.js"></script>
+  <link rel="stylesheet" crossorigin href="/boardgames/assets/index-DPg7yzcv.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="fleuron">❦</div>
+      <h1>Yujun's Board Games</h1>
+      <p class="tagline">ten tables, always open — bring a friend, share a room code</p>
+    </header>
+
+    <div id="wallet"></div>
+
+    <div class="games">
+      <a class="game toybattle" href="https://yujun0327.github.io/toybattle/">
+        <!-- toy flag emblem -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <path d="M24 12 v50" stroke="#4a3728" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M26 13 Q40 8 43 14 Q52 10 54 17 L50 30 Q44 26 40 30 Q30 33 26 28 Z" fill="#c74a33" stroke="#4a3728" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="24" cy="10" r="3.4" fill="#e8b64c" stroke="#4a3728" stroke-width="2"/>
+          <path d="M14 62 h44" stroke="#4a3728" stroke-width="3" stroke-linecap="round"/>
+          <path d="M33 48 l5 -7 5 7 z" fill="#5b7a9a" stroke="#4a3728" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <h2>Toy Battle</h2>
+        <p>March tin troops across hand-drawn battlefields and claim the nursery floor.</p>
+        <span class="play">deploy the toys</span>
+        <span class="players">2 players &middot; head to head</span>
+      </a>
+
+      <a class="game harmonies" href="https://yujun0327.github.io/harmonies/">
+        <!-- hex-tree emblem (matches the game's favicon) -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <path d="M37 7 L62 21.5 V52.5 L37 67 L12 52.5 V21.5 Z" fill="#efe8d2" stroke="#3a3527" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M37 52 V41" stroke="#3a3527" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M24 34 Q22 22 31 23 Q33 15 40 19 Q49 16 48 25 Q55 29 49 36 Q50 42 42 41 Q36 46 31 41 Q23 42 24 34 Z" fill="#5c7a4a" stroke="#3a3527" stroke-width="2.4" stroke-linejoin="round"/>
+        </svg>
+        <h2>Harmonies</h2>
+        <p>Stack a small wild landscape and welcome the animals who call it home.</p>
+        <span class="play">open the field guide</span>
+        <span class="players">2&ndash;4 players &middot; hotseat too</span>
+      </a>
+
+      <a class="game splendor" href="https://yujun0327.github.io/splendor/">
+        <!-- art-deco gem emblem -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <circle cx="37" cy="37" r="30" fill="none" stroke="#c9a227" stroke-width="2"/>
+          <circle cx="37" cy="37" r="25.5" fill="none" stroke="#c9a227" stroke-width="0.8" opacity="0.6"/>
+          <path d="M25 30 L32 22 H42 L49 30 L37 52 Z" fill="#1e7a4e" stroke="#c9a227" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M25 30 H49 M32 22 L34.5 30 L37 52 M42 22 L39.5 30" fill="none" stroke="#c9a227" stroke-width="1.2" opacity="0.85"/>
+        </svg>
+        <h2>Splendor</h2>
+        <p>Draft gems, court nobles, and build a Renaissance jewel empire.</p>
+        <span class="play">enter the salon</span>
+        <span class="players">2&ndash;4 players &middot; hotseat too</span>
+      </a>
+      <a class="game castlecombo" href="https://yujun0327.github.io/castlecombo/">
+        <!-- illuminated 3×3 page with wax seal -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <rect x="13" y="9" width="48" height="56" rx="3" fill="#f6edd6" stroke="#3b2f1e" stroke-width="2.4"/>
+          <g stroke="#3b2f1e" stroke-width="1.6" opacity="0.55">
+            <path d="M22 24 h30 M22 37 h30 M22 50 h30"/>
+            <path d="M31.5 17 v40 M42.5 17 v40"/>
+          </g>
+          <rect x="32.5" y="26" width="9" height="9" fill="#c29832" stroke="#3b2f1e" stroke-width="1.6"/>
+          <path d="M22 15 q7 -4 14 0 q7 -4 16 0" fill="none" stroke="#9e3b23" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="53" cy="57" r="8.5" fill="#9e3b23" stroke="#3b2f1e" stroke-width="2"/>
+          <path d="M49.5 57 l2.5 2.5 l4.5 -5" fill="none" stroke="#f6edd6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h2>Castle Combo</h2>
+        <p>Court the castle and the village, and pen a nine-card kingdom worth singing about.</p>
+        <span class="play">open the manuscript</span>
+        <span class="players">2&ndash;4 players &middot; hotseat too</span>
+      </a>
+
+      <a class="game yachtnight" href="https://yujun0327.github.io/yachtnight/">
+        <!-- spotlit felt with a pair of thrown dice -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <circle cx="37" cy="37" r="30" fill="#0b3d2e" stroke="#c9a227" stroke-width="2"/>
+          <circle cx="37" cy="37" r="25.5" fill="none" stroke="#c9a227" stroke-width="0.8" opacity="0.5"/>
+          <g transform="rotate(-12 30 38)">
+            <rect x="17" y="25" width="25" height="25" rx="4.5" fill="#f4ecd9" stroke="#2a2118" stroke-width="2.2"/>
+            <circle cx="23.5" cy="31.5" r="2.1" fill="#2a2118"/>
+            <circle cx="35.5" cy="31.5" r="2.1" fill="#2a2118"/>
+            <circle cx="29.5" cy="37.5" r="2.1" fill="#2a2118"/>
+            <circle cx="23.5" cy="43.5" r="2.1" fill="#2a2118"/>
+            <circle cx="35.5" cy="43.5" r="2.1" fill="#2a2118"/>
+          </g>
+          <g transform="rotate(14 49 42)">
+            <rect x="39" y="31" width="20" height="20" rx="3.8" fill="#f4ecd9" stroke="#2a2118" stroke-width="2.2"/>
+            <circle cx="44.5" cy="36.5" r="1.9" fill="#2a2118"/>
+            <circle cx="53.5" cy="45.5" r="1.9" fill="#2a2118"/>
+          </g>
+        </svg>
+        <h2>Yacht Night</h2>
+        <p>Shake the cup — really shake it — and throw real tumbling dice under the spotlight.</p>
+        <span class="play">take the cup</span>
+        <span class="players">1&ndash;4 players &middot; solo &amp; hotseat too</span>
+      </a>
+
+      <a class="game davincicode" href="https://yujun0327.github.io/davincicode/">
+        <!-- two cipher slips under the stamp strike (matches the game's favicon) -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <rect x="12" y="14" width="22" height="44" rx="3" fill="#17130e" stroke="#2b2620" stroke-width="2"/>
+          <rect x="17.5" y="33" width="11" height="6" rx="1.4" fill="#f9f3e2" opacity="0.9"/>
+          <rect x="40" y="14" width="22" height="44" rx="3" fill="#f9f3e2" stroke="#2b2620" stroke-width="2"/>
+          <path d="M45.5 29 H56 L49.5 45" fill="none" stroke="#2b2620" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M42 54 L60 20" stroke="#a6382e" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+        </svg>
+        <h2>Davinci Code</h2>
+        <p>Stand your ciphers in a sealed row — and crack theirs before they crack yours.</p>
+        <span class="play">open the dossier</span>
+        <span class="players">2&ndash;4 players &middot; hotseat too</span>
+      </a>
+
+      <a class="game gostop" href="https://yujun0327.github.io/gostop/">
+        <!-- a hwatu card: pine and crane -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <rect x="19" y="6" width="36" height="58" rx="5" fill="#14100e"/>
+          <rect x="22.5" y="9.5" width="29" height="51" rx="3" fill="#f3ead6"/>
+          <circle cx="42" cy="22" r="6" fill="#c8102e"/>
+          <path d="M26 50 q6 -14 12 -6 q5 -12 12 -2 v14 h-24z" fill="#1f6f43"/>
+          <path d="M28 40 l6 -9 M31 41 l7 -11 M46 36 l-6 -9 M44 37 l-8 -11" stroke="#14100e" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M31 30 q5 -6 11 -2 q3 2 2 5 q-6 -2 -13 -3z" fill="#f3ead6" stroke="#14100e" stroke-width="1.5"/>
+        </svg>
+        <h2>고스탑</h2>
+        <p>담요 깔고 한 판 — 뻑, 따닥, 쪽, 싹쓸이, 고와 스톱, 점당으로 정산.</p>
+        <span class="play">패 돌리기</span>
+        <span class="players">2&ndash;3 players &middot; hotseat too</span>
+      </a>
+
+      <a class="game seotda" href="https://yujun0327.github.io/seotda/">
+        <!-- two face-down cards and a chip -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <rect x="14" y="14" width="26" height="42" rx="4" fill="#a0101e" stroke="#2a1610" stroke-width="2" transform="rotate(-8 27 35)"/>
+          <rect x="34" y="14" width="26" height="42" rx="4" fill="#a0101e" stroke="#2a1610" stroke-width="2" transform="rotate(8 47 35)"/>
+          <path d="M18 20 l18 30 M22 18 l18 30 M26 16 l18 30" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" transform="rotate(-8 27 35)"/>
+          <circle cx="37" cy="58" r="9" fill="#b8862b" stroke="#7a5a1a" stroke-width="2"/>
+          <circle cx="37" cy="58" r="5" fill="none" stroke="#2a1610" stroke-width="1.2" stroke-dasharray="2 2"/>
+        </svg>
+        <h2>섯다</h2>
+        <p>뒷방, 불 하나, 패 두 장 — 삥·따당·하프·올인, 38광땡부터 망통까지.</p>
+        <span class="play">자리 잡기</span>
+        <span class="players">2&ndash;5 players &middot; online only</span>
+      </a>
+
+      <a class="game holdem" href="https://yujun0327.github.io/holdem/">
+        <!-- two hole cards on navy felt with a brass chip -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <rect x="16" y="12" width="24" height="34" rx="3" fill="#efe6d3" stroke="#15130f" stroke-width="1.8" transform="rotate(-10 28 29)"/>
+          <text x="21" y="27" font-family="Georgia, serif" font-weight="700" font-size="11" fill="#15130f" transform="rotate(-10 28 29)">A</text>
+          <path d="M23 32 l3 -4 l3 4 q0 3 -3 3 q-3 0 -3 -3z" fill="#15130f" transform="rotate(-10 28 29)"/>
+          <rect x="34" y="12" width="24" height="34" rx="3" fill="#efe6d3" stroke="#15130f" stroke-width="1.8" transform="rotate(10 46 29)"/>
+          <text x="39" y="27" font-family="Georgia, serif" font-weight="700" font-size="11" fill="#7a1f2b" transform="rotate(10 46 29)">A</text>
+          <path d="M43 30 q2 -3 4 0 q2 -3 4 0 q0 3 -4 6 q-4 -3 -4 -6z" fill="#7a1f2b" transform="rotate(10 46 29)"/>
+          <circle cx="37" cy="57" r="9" fill="#b8862b" stroke="#7a5a1a" stroke-width="2"/>
+          <circle cx="37" cy="57" r="5.5" fill="none" stroke="#132238" stroke-width="1.4" stroke-dasharray="2.5 2.5"/>
+        </svg>
+        <h2>Hold'em</h2>
+        <p>The card room after midnight — blinds, side pots, all-ins, and the river to decide it.</p>
+        <span class="play">take a seat</span>
+        <span class="players">2&ndash;6 players &middot; online only</span>
+      </a>
+
+      <a class="game skyteam" href="https://yujun0327.github.io/skyteam/">
+        <!-- artificial horizon with a blue and an orange die -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <circle cx="37" cy="37" r="30" fill="#1d3f7a" stroke="#8a94a0" stroke-width="2"/>
+          <path d="M7 37 a30 30 0 0 0 60 0 z" fill="#4a3018"/>
+          <path d="M7 37 H67" stroke="#e6ebf0" stroke-width="1.6"/>
+          <path d="M20 37 h10 l4 4 h6 l4 -4 h10" fill="none" stroke="#ffb000" stroke-width="3" stroke-linecap="round"/>
+          <rect x="14" y="48" width="14" height="14" rx="3" fill="#2f7bff" stroke="#0b0f14" stroke-width="1.5"/>
+          <circle cx="21" cy="55" r="2" fill="#fff"/>
+          <rect x="46" y="48" width="14" height="14" rx="3" fill="#ff8a1f" stroke="#0b0f14" stroke-width="1.5"/>
+          <circle cx="50" cy="52" r="1.8" fill="#fff"/><circle cx="56" cy="58" r="1.8" fill="#fff"/>
+        </svg>
+        <h2>Sky Team</h2>
+        <p>Pilot and Co-Pilot land the airliner in silence — dice, coffee, brakes, and one runway.</p>
+        <span class="play">enter the cockpit</span>
+        <span class="players">2 players &middot; solo practice too</span>
+      </a>
+    </div>
+
+    <div id="ranking"></div>
+
+    <footer>
+      <p>Fan-made adaptations for private play among friends — original code and art. No accounts: your wallet lives in this browser and follows you with a link code.</p>
+      <p>Not affiliated with the publishers of the original games. If one makes you smile, buy it for your real table.</p>
+      <p id="build-stamp"></p>
+    </footer>
+  </main>
+</body>
+</html>

@@ -9,7 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' rx='5' fill='%23F2EBD9' stroke='%233A3527' stroke-width='2'/%3E%3Ccircle cx='11' cy='11' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='21' cy='11' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='11' cy='21' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='21' cy='21' r='2.4' fill='%233A3527'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23A9553F'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,620&family=Alegreya:ital,wght@0,400;1,400&family=Lilita+One&family=Marcellus&family=Grenze+Gotisch:wght@500&family=Saira+Stencil+One&family=Courier+Prime:ital@1&family=Limelight&family=Michroma&family=Black+Han+Sans&family=Song+Myung&family=Fraunces:opsz,wght@9..144,700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,620&family=Alegreya:ital,wght@0,400;1,400&family=Lilita+One&family=Marcellus&family=Grenze+Gotisch:wght@500&family=Saira+Stencil+One&family=Courier+Prime:ital@1&family=Limelight&family=Michroma&family=Black+Han+Sans&family=Song+Myung&family=Fraunces:opsz,wght@9..144,700&family=Ma+Shan+Zheng&family=Archivo+Black&display=swap" rel="stylesheet" />
   <style>
     :root {
       --paper: #f2ebd9;
@@ -207,6 +207,16 @@
     .majiang p { color: rgb(243 236 218 / 0.85); }
     .majiang .play { color: #ecd07e; background: rgb(163 39 31 / 0.4); border-color: #a3271f; }
 
+    /* — Poker Chips: the phone on the table — */
+    .pokerchips {
+      background: #0f2a26;
+      color: #f2ead8;
+      border-color: rgb(242 234 216 / 0.4);
+    }
+    .pokerchips h2 { font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; color: #f2ead8; letter-spacing: -0.02em; font-size: 1.55rem; text-transform: uppercase; }
+    .pokerchips p { color: rgb(242 234 216 / 0.85); }
+    .pokerchips .play { color: #fff; background: #d6402f; border-color: #d6402f; }
+
     footer {
       margin-top: 3.5rem;
       text-align: center;
@@ -224,7 +234,7 @@
     <header>
       <div class="fleuron">❦</div>
       <h1>Yujun's Board Games</h1>
-      <p class="tagline">eleven tables, always open — bring a friend, share a room code</p>
+      <p class="tagline">twelve tables, always open — bring a friend, share a room code</p>
     </header>
 
     <div id="wallet"></div>
@@ -395,6 +405,27 @@
         <p>Mahjong for four, simple rules — chow, pung, kong, win. Short a player? Bots take the empty seats.</p>
         <span class="play">take a seat</span>
         <span class="players">1&ndash;4 players &middot; bots fill empty seats</span>
+      </a>
+
+      <a class="game pokerchips" href="https://yujun0327.github.io/pokerchips/">
+        <!-- a phone lying on the table showing the pot, with a stack of clay chips beside it -->
+        <svg class="emblem" viewBox="0 0 74 74" aria-hidden="true">
+          <rect x="10" y="8" width="32" height="58" rx="5" fill="#f2ead8" stroke="#0a1f1c" stroke-width="2"/>
+          <rect x="14" y="14" width="24" height="9" rx="1.5" fill="#0f2a26"/>
+          <path d="M14 29 h24 M14 35 h24 M14 41 h24" stroke="#0f2a26" stroke-width="1.6" opacity="0.45"/>
+          <rect x="14" y="50" width="11" height="10" rx="2" fill="none" stroke="#0f2a26" stroke-width="1.6"/>
+          <rect x="27" y="50" width="11" height="10" rx="2" fill="#d6402f"/>
+          <g stroke="#0a1f1c" stroke-width="1.4">
+            <rect x="48" y="50" width="20" height="7" rx="2" fill="#d6402f"/>
+            <rect x="48" y="43" width="20" height="7" rx="2" fill="#f2ead8"/>
+            <rect x="48" y="36" width="20" height="7" rx="2" fill="#d6402f"/>
+            <rect x="48" y="29" width="20" height="7" rx="2" fill="#e8b84a"/>
+          </g>
+        </svg>
+        <h2>Poker Chips</h2>
+        <p>Real cards on a real table; the phones are the chips. Everyone sees the same pot, and one of you pays out the winner.</p>
+        <span class="play">open a table</span>
+        <span class="players">2&ndash;10 players &middot; in person</span>
       </a>
 
       <a class="game skyteam" href="https://yujun0327.github.io/skyteam/">
